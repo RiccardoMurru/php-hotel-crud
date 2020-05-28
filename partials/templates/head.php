@@ -1,7 +1,3 @@
-<?php 
-include __DIR__ . '/../home/server.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
