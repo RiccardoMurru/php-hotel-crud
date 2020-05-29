@@ -15,6 +15,8 @@ include __DIR__ . '/../show/server.php';
             </ul>
             <div class="text-center p-2">
                 <a href="<?php echo $base_path; ?>" class="card-link">Torna alla home</a>
+                <a href="<?php echo $base_path; ?>edit.php?id=<?php echo $room['id'] ?>" class="card-link">Modifica</a>
+                
             </div>
         </div>
     </div>

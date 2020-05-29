@@ -20,6 +20,7 @@ if (!empty($_GET['del'])) { ?>
                 </ul>
                 <div class="text-center d-flex justify-content-around align-items-center p-2">
                     <a class="btn btn-sm btn-outline-info" href="<?php echo $base_path; ?>show.php?id=<?php echo "{$room['id']}"; ?>">Dettagli</a>
+                    <a class="btn btn-sm btn-outline-primary" href="<?php echo $base_path; ?>edit.php?id=<?php echo "{$room['id']}"; ?>">Modifica</a>
                     <form action="<?php echo $base_path; ?>partials/delete/server.php" method="POST">
                         <input type="hidden" name="id" value="<?php echo $room['id']; ?>">
                         <input class="btn btn-sm btn-outline-danger" type="submit" value="Elimina">
