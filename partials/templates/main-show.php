@@ -1,4 +1,5 @@
 <?php 
+include __DIR__ . '/../../env.php';
 include __DIR__ . '/../show/server.php';
 ?>
 
@@ -13,7 +14,7 @@ include __DIR__ . '/../show/server.php';
                 <li class="list-group-item"><?php echo "Piano: {$room['floor']}"; ?></li>
             </ul>
             <div class="text-center p-2">
-                <a href="./" class="card-link">Torna alla home</a>
+                <a href="<?php echo $base_path; ?>" class="card-link">Torna alla home</a>
             </div>
         </div>
     </div>
