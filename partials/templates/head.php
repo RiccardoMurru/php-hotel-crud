@@ -11,3 +11,14 @@ include __DIR__ . '/../../env.php';
     <link rel="stylesheet" href="<?php echo $base_path; ?>dist/css/main.css">
 </head>
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="<?php echo $base_path; ?>">Hotel</a>
+            <div class="ml-auto">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="<?php echo $base_path; ?>">Home</a>
+                    <a class="nav-item nav-link" href="<?php echo $base_path . 'create.php'; ?>">Nuova Stanza</a>
+                </div>
+            </div>
+        </nav>
+    </header>
