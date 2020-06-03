@@ -12,13 +12,16 @@ $beds = $_POST['beds'];
 
 
 $sql = "UPDATE `stanze` 
-        SET `room_number` = $room_number, `floor` = $floor, `beds` = $beds
-        WHERE `id` = $room_id";
-$result = $conn->query($sql);
+        SET `room_number` = ?, `floor` = ?, `beds` = ?, `updated_at` = NOW()
+        WHERE `id` = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param('iiii', $room_number, $floor, $beds, $room_id);
+$stmt->execute();
 
-if ($result && $conn->affected_rows > 0) {
+
+if ($stmt && $stmt->affected_rows > 0) {
     header("Location: $base_path/show.php?id=$room_id");
-} elseif ($result) {
+} elseif ($stmt) {
     echo 'Nessuna stanza modificata';
 } else {
     echo 'Errore query';
